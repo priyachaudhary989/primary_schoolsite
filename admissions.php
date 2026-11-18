@@ -9,7 +9,6 @@ $school = [
     ],
     'address' => 'C/O: Tilak Khulal, Habigaon Grant, Udalguri, Assam, 784507'
 ];
-
 include 'includes/header.php';
 ?>
 <!-- ADMISSION HERO -->
@@ -311,7 +310,7 @@ alt="Books and educational materials">
 
 <!-- DIRECT CONTACT -->
 
-<section class="admission-contact">
+<section class="admission-contact" id="admission-contact">
 <div class="wrap admission-contact-box">
 
 <div>
@@ -338,6 +337,37 @@ href="mailto:<?= e($school['emails'][0]) ?>?subject=Admission%20Enquiry">
 
 </div>
 
+</div>
+</section>
+
+<!-- ADMISSIONS FAQ -->
+
+<section class="section pale admission-faq">
+<div class="wrap">
+<div class="admission-heading">
+<label>QUICK ANSWERS</label>
+<h2>Admission Questions</h2>
+<p>For current details, please contact the school directly.</p>
+</div>
+
+<div class="admission-faq-list">
+<details>
+<summary>How do I ask about admission?</summary>
+<p>Call the school or email us using the contact details on this page. We can guide you through the current enquiry and application steps.</p>
+</details>
+<details>
+<summary>Which classes and age groups are available?</summary>
+<p>Please contact the school to confirm current class availability and age requirements.</p>
+</details>
+<details>
+<summary>What documents should I prepare?</summary>
+<p>Document requirements can vary. Please confirm the current list with the school before submitting an application.</p>
+</details>
+<details>
+<summary>How can I find out about fees and school hours?</summary>
+<p>Contact the school directly for the latest fee information and school timings.</p>
+</details>
+</div>
 </div>
 </section>
 

@@ -1,17 +1,7 @@
 
 <?php
-$school=[
-    'name'=>'SHARMILA ENTERPRISES',
-    'phone'=>'9101098127',
-    'emails'=>['lokchetry497@gmail.com','basnetlok1@gmail.com'],
-    'address'=>'C/O: Tilak Khulal, Habigaon Grant, Udalguri, Assam, 784507'
-];
-
-function e($v){
-    return htmlspecialchars($v,ENT_QUOTES,'UTF-8');
-}
-
-$page=basename($_SERVER['PHP_SELF']);
+require_once __DIR__ . '/config.php';
+$page = basename($_SERVER['PHP_SELF']);
 ?>
 
 <!doctype html>
@@ -96,7 +86,7 @@ to assist you.
 <h3>Phone / WhatsApp</h3>
 
 <p>
-+91 <?= e($school['phone']) ?>
+<a href="tel:+91<?= e($school['phone']) ?>">+91 <?= e($school['phone']) ?></a>
 </p>
 
 <a href="https://wa.me/91<?= e($school['phone']) ?>"
@@ -177,66 +167,62 @@ Open WhatsApp Chat
 </div>
 
 
+
+
 <div class="whatsapp-form">
 
 <h2>Send Your Enquiry</h2>
 
+
 <form id="whatsappForm">
 
-<div class="form-group">
-<label>Your Full Name</label>
+    <p class="form-privacy-note">Your enquiry opens in WhatsApp for you to review and send. The website does not store your message.</p>
 
-<input type="text"
-id="customerName"
-placeholder="Enter your name"
-required>
-</div>
+    <div class="form-group">
+        <label for="customerName">Your Full Name</label>
+        <input type="text" id="customerName" name="name" autocomplete="name"
+               placeholder="Enter your name" maxlength="80" required>
+    </div>
 
+    <div class="form-group">
+        <label for="customerPhone">Mobile Number</label>
+        <input type="tel" id="customerPhone" name="phone" autocomplete="tel"
+               placeholder="Enter mobile number"
+               inputmode="tel" pattern="[0-9+()\-\s]{10,18}" maxlength="18" required>
+    </div>
 
-<div class="form-group">
-<label>Mobile Number</label>
+    <div class="form-group">
+        <label for="customerEmail">Email Address</label>
+        <input type="email" id="customerEmail" name="email" autocomplete="email"
+               placeholder="Enter your email address" maxlength="254" required>
+    </div>
 
-<input type="tel"
-id="customerPhone"
-placeholder="Enter mobile number"
-pattern="[0-9+\-\s]{10,15}"
-title="Please enter a valid mobile number"
-required>
-</div>
+    <div class="form-group">
+        <label for="customerSubject">Enquiry Subject</label>
+        <select id="customerSubject" name="subject" required>
+            <option value="">Select Enquiry</option>
+            <option>School Admission</option>
+            <option>Primary Section Information</option>
+            <option>Class Information</option>
+            <option>Fee Enquiry</option>
+            <option>General Enquiry</option>
+            <option>Other</option>
+        </select>
+    </div>
 
+    <div class="form-group">
+        <label for="customerMessage">Your Message</label>
+        <textarea id="customerMessage" name="message" maxlength="2000"
+                  placeholder="Write your message here..."
+                  rows="5" required></textarea>
+    </div>
 
-<div class="form-group">
-<label>Enquiry Subject</label>
+    <p id="whatsappFormStatus" class="form-status" role="status" aria-live="polite"></p>
 
-<select id="customerSubject" required>
-
-<option value="">Select Enquiry</option>
-<option>School Admission</option>
-<option>Primary Section Information</option>
-<option>Class Information</option>
-<option>Fee Enquiry</option>
-<option>General Enquiry</option>
-<option>Other</option>
-
-</select>
-</div>
-
-
-<div class="form-group">
-<label>Your Message</label>
-
-<textarea id="customerMessage"
-placeholder="Write your message here..."
-rows="5"
-required></textarea>
-</div>
-
-
-<button type="submit" class="whatsapp-submit">
-Send Message on WhatsApp
-</button>
+    <button type="submit" class="whatsapp-submit">Continue to WhatsApp</button>
 
 </form>
+
 
 </div>
 
@@ -381,41 +367,38 @@ Chat With Us on WhatsApp
 <!-- WHATSAPP FORM SCRIPT -->
 
 <script>
-document.getElementById("whatsappForm").addEventListener("submit", function(e){
+const enquiryForm = document.getElementById('whatsappForm');
+if (enquiryForm) {
+    const makeEnquiryMessage = function () {
+        return {
+            name: document.getElementById('customerName').value.trim(),
+            phone: document.getElementById('customerPhone').value.trim(),
+            email: document.getElementById('customerEmail').value.trim(),
+            subject: document.getElementById('customerSubject').value,
+            message: document.getElementById('customerMessage').value.trim()
+        };
+    };
 
-    e.preventDefault();
+    enquiryForm.addEventListener('submit', function (event) {
+        event.preventDefault();
 
-    let name = document.getElementById("customerName").value.trim();
-    let phone = document.getElementById("customerPhone").value.trim();
-    let subject = document.getElementById("customerSubject").value;
-    let message = document.getElementById("customerMessage").value.trim();
+        const enquiry = makeEnquiryMessage();
+        const status = document.getElementById('whatsappFormStatus');
 
-    if(!name || !phone || !subject || !message){
-        alert("Please fill all fields.");
-        return;
-    }
+        if (!enquiryForm.reportValidity()) return;
+        if (!enquiry.name || !enquiry.phone || !enquiry.email || !enquiry.subject || !enquiry.message) {
+            status.textContent = 'Please complete every field before continuing.';
+            return;
+        }
 
-    let whatsappMessage =
-`Hello SHARMILA ENTERPRISES,
+        const whatsappMessage = `Hello SHARMILA ENTERPRISES,\n\nWebsite Enquiry\n\nName: ${enquiry.name}\nMobile: ${enquiry.phone}\nEmail: ${enquiry.email}\nSubject: ${enquiry.subject}\n\nMessage:\n${enquiry.message}\n\nThank you.`;
+        const whatsappURL = 'https://wa.me/91<?= e($school['phone']) ?>?text=' + encodeURIComponent(whatsappMessage);
+        status.textContent = 'Opening WhatsApp with your enquiry. Please review and tap Send there.';
 
-New Website Enquiry
-
-Name: ${name}
-Mobile: ${phone}
-Subject: ${subject}
-
-Message:
-${message}
-
-Thank you.`;
-
-    let whatsappURL =
-    "https://wa.me/91<?= e($school['phone']) ?>?text=" +
-    encodeURIComponent(whatsappMessage);
-
-    window.open(whatsappURL, "_blank");
-
-});
+        const whatsappWindow = window.open(whatsappURL, '_blank', 'noopener,noreferrer');
+        if (!whatsappWindow) window.location.assign(whatsappURL);
+    });
+}
 </script>
 
 <?php include 'includes/footer.php'; ?>

@@ -280,16 +280,20 @@ img {
 /* WHY CHOOSE US */
 
 .why-section {
-    background: #17356a;
-    color: white;
+    background: #fff5df;
+    color: #26344a;
 }
 
 .why-section .section-heading h2 {
-    color: white;
+    color: #17356a;
 }
 
 .why-section .section-heading p {
-    color: #d6dfef;
+    color: #5d6878;
+}
+
+.why-section .section-heading span {
+    color: #b77c20;
 }
 
 .why-grid {
@@ -301,9 +305,10 @@ img {
 .why-card {
     text-align: center;
     padding: 30px 18px;
-    background: rgba(255,255,255,.09);
-    border: 1px solid rgba(255,255,255,.15);
+    background: #fff;
+    border: 1px solid #f0dfb7;
     border-radius: 10px;
+    color: #26344a;
 }
 
 .why-icon {
@@ -319,7 +324,7 @@ img {
 .why-card p {
     font-size: 13px;
     line-height: 1.8;
-    color: #d6dfef;
+    color: #5d6878;
 }
 
 /* GALLERY */
@@ -346,27 +351,26 @@ img {
 
 .cta-section {
     padding: 70px 20px;
-    background:
-    linear-gradient(rgba(17,46,91,.90),rgba(17,46,91,.90)),
-    url('https://images.unsplash.com/photo-1503676260728-1c00da094a0b?auto=format&fit=crop&w=1500&q=80') center/cover;
+    background: #fff5df;
     text-align: center;
-    color: white;
+    color: #26344a;
 }
 
 .cta-section h2 {
     font-size: 34px;
     margin-bottom: 15px;
+    color: #17356a;
 }
 
 .cta-section p {
-    color: #e5eaf3;
+    color: #5d6878;
     line-height: 1.8;
 }
 
 .cta-section a {
     display: inline-block;
-    background: #f5a623;
-    color: #17356a;
+    background: #b77c20;
+    color: #fff;
     text-decoration: none;
     padding: 13px 30px;
     margin-top: 25px;

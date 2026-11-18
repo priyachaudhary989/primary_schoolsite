@@ -28,7 +28,7 @@ $page=basename($_SERVER['PHP_SELF']);
 
 </head>
 
-<body>
+<body class="about-page">
 
 <!-- HEADER -->
 
@@ -36,13 +36,27 @@ $page=basename($_SERVER['PHP_SELF']);
 
 <main>
 
-<!-- ABOUT BANNER -->
+<!-- ABOUT HERO -->
 
-<section class="banner">
-<div class="wrap">
-<label>ABOUT US</label>
-<h1>About SHARMILA ENTERPRISES</h1>
-<p>Learn • Grow • Excel</p>
+<section class="about-hero">
+<div class="wrap about-hero-inner">
+    <div class="about-hero-copy">
+        <label>ABOUT OUR SCHOOL</label>
+        <h1>A bright beginning for every <span>young learner</span></h1>
+        <p>Discover the values and learning approach behind SHARMILA ENTERPRISES Primary School.</p>
+        <div class="about-hero-actions">
+            <a href="admissions.php" class="btn">Explore Admissions</a>
+            <a href="contact.php" class="about-hero-link">Get in touch <span aria-hidden="true">→</span></a>
+        </div>
+        <div class="about-hero-values" aria-label="Our school values">
+            <span>Curiosity</span><span>Confidence</span><span>Creativity</span>
+        </div>
+    </div>
+    <div class="about-hero-art" aria-hidden="true">
+        <div class="about-hero-orbit"></div>
+        <img src="assets/images/sharmila-logo.png" alt="">
+        <div class="about-hero-stamp">LEARN<br><b>GROW</b><br>EXCEL</div>
+    </div>
 </div>
 </section>
 
@@ -50,7 +64,7 @@ $page=basename($_SERVER['PHP_SELF']);
 <!-- INTRODUCTION -->
 
 <section class="section">
-<div class="wrap split">
+<div class="wrap split about-intro">
 
 <div>
 <label>OUR SCHOOL</label>
@@ -78,9 +92,7 @@ good habits and positive values.
 
 </div>
 
-<img class="portrait"
-src="assets/images/school-representative.jpeg"
-alt="SHARMILA ENTERPRISES School Representative">
+<img class="portrait portrait-cutout" src="assets/images/sharmila-devi.png" alt="Sharmila Devi, Director of SHARMILA ENTERPRISES">
 
 </div>
 </section>
@@ -287,9 +299,7 @@ develop throughout life.
 <div class="wrap director-grid">
 
 <div class="director-photo">
-<img
-src="assets/images/school-representative.jpeg"
-alt="Sharmila Devi - Director">
+<img src="assets/images/sharmila-devi.png" alt="Sharmila Devi, Director of SHARMILA ENTERPRISES">
 </div>
 
 <div>

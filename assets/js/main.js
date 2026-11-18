@@ -8,9 +8,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
         toggle.addEventListener("click", function () {
 
-            nav.classList.toggle("show");
+            nav.classList.toggle("open");
 
-            const isOpen = nav.classList.contains("show");
+            const isOpen = nav.classList.contains("open");
 
             toggle.setAttribute("aria-expanded", isOpen);
             toggle.innerHTML = isOpen ? "✕" : "☰";
@@ -21,7 +21,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
             link.addEventListener("click", function () {
 
-                nav.classList.remove("show");
+                nav.classList.remove("open");
 
                 toggle.setAttribute("aria-expanded", "false");
                 toggle.innerHTML = "☰";

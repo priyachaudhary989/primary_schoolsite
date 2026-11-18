@@ -58,7 +58,7 @@ include 'includes/header.php';
         <div class="hero-visual">
 
             <div class="hero-image">
-                <img src="assets/images/school-building.jpg" alt="School Building">
+                <img src="https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&w=1200&q=80" alt="School Building">
             </div>
 
             <div class="hero-floating-card">
@@ -115,11 +115,11 @@ include 'includes/header.php';
 
         <div class="about-visual">
             <div class="about-main-image">
-                <img src="assets/images/classroom.jpg" alt="School Classroom">
+                <img src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?auto=format&fit=crop&w=1000&q=80" alt="School Classroom">
             </div>
 
             <div class="about-small-image">
-                <img src="assets/images/children-activities.jpg" alt="Children Activities">
+                <img src="https://images.unsplash.com/photo-1472162072942-cd5147eb3902?auto=format&fit=crop&w=1000&q=80" alt="Children Activities">
             </div>
 
             <div class="about-label">
@@ -234,7 +234,7 @@ include 'includes/header.php';
 
             <div class="learning-card">
                 <div class="learning-image">
-                    <img src="assets/images/reading.jpg" alt="Reading and Language">
+                    <img src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?auto=format&fit=crop&w=700&q=80" alt="Reading and Language">
                     <span class="learning-tag">01</span>
                 </div>
                 <div class="learning-info">
@@ -246,7 +246,7 @@ include 'includes/header.php';
 
             <div class="learning-card">
                 <div class="learning-image">
-                    <img src="assets/images/mathematics.jpg" alt="Mathematics Learning">
+                    <img src="https://images.unsplash.com/photo-1596495578065-6e0763fa1178?auto=format&fit=crop&w=700&q=80" alt="Mathematics Learning">
                     <span class="learning-tag">02</span>
                 </div>
                 <div class="learning-info">
@@ -258,7 +258,7 @@ include 'includes/header.php';
 
             <div class="learning-card">
                 <div class="learning-image">
-                    <img src="assets/images/art-craft.jpg" alt="Art and Craft">
+                    <img src="https://images.unsplash.com/photo-1513364776144-60967b0f800f?auto=format&fit=crop&w=700&q=80" alt="Art and Craft">
                     <span class="learning-tag">03</span>
                 </div>
                 <div class="learning-info">
@@ -283,7 +283,7 @@ include 'includes/header.php';
     <div class="wrap activities-grid">
 
         <div class="activities-image">
-            <img src="assets/images/children-activities.jpg" alt="Children School Activities">
+            <img src="https://images.unsplash.com/photo-1472162072942-cd5147eb3902?auto=format&fit=crop&w=1000&q=80" alt="Children School Activities">
             <div class="image-caption">
                 <span>✦</span> Learning Through Experiences
             </div>
@@ -383,7 +383,7 @@ include 'includes/header.php';
         </div>
 
         <div class="environment-image">
-            <img src="assets/images/classroom.jpg" alt="School Learning Environment">
+            <img src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?auto=format&fit=crop&w=1000&q=80" alt="School Learning Environment">
             <div class="environment-sticker">
                 <span>✦</span>
                 <strong>Learn</strong>
@@ -423,10 +423,8 @@ include 'includes/header.php';
     <div class="wrap director-grid">
 
         <div class="director-image">
-            <img src="assets/images/school-representative.jpeg" alt="Sharmila Devi">
-            <div class="director-image-label">
-                SHARMILA ENTERPRISES
-            </div>
+            <img src="assets/images/sharmila-devi.png" alt="Sharmila Devi, Director of SHARMILA ENTERPRISES">
+            <div class="director-image-label">SHARMILA ENTERPRISES</div>
         </div>
 
         <div class="director-content">
@@ -511,40 +509,69 @@ include 'includes/header.php';
 
         <div class="home-gallery">
 
-            <div class="gallery-item gallery-large">
-                <img src="assets/images/school-building.jpg" alt="School Building">
+            <button class="gallery-item gallery-large" type="button" data-full="https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&w=1800&q=90" aria-label="View Our School photo larger">
+                <img src="https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&w=1200&q=80" alt="School building">
                 <span>Our School</span>
-            </div>
+            </button>
 
-            <div class="gallery-item">
-                <img src="assets/images/classroom.jpg" alt="Classroom">
+            <button class="gallery-item" type="button" data-full="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?auto=format&fit=crop&w=1600&q=90" aria-label="View Learning Environment photo larger">
+                <img src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?auto=format&fit=crop&w=1000&q=80" alt="Children learning in a classroom">
                 <span>Learning Environment</span>
-            </div>
+            </button>
 
-            <div class="gallery-item">
-                <img src="assets/images/reading.jpg" alt="Reading">
+            <button class="gallery-item" type="button" data-full="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?auto=format&fit=crop&w=1600&q=90" aria-label="View Reading Activities photo larger">
+                <img src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?auto=format&fit=crop&w=700&q=80" alt="Children reading and studying">
                 <span>Reading Activities</span>
-            </div>
+            </button>
 
-            <div class="gallery-item">
-                <img src="assets/images/art-craft.jpg" alt="Creative Activity">
+            <button class="gallery-item" type="button" data-full="https://images.unsplash.com/photo-1513364776144-60967b0f800f?auto=format&fit=crop&w=1600&q=90" aria-label="View Creative Learning photo larger">
+                <img src="https://images.unsplash.com/photo-1513364776144-60967b0f800f?auto=format&fit=crop&w=700&q=80" alt="Children creating artwork">
                 <span>Creative Learning</span>
-            </div>
+            </button>
 
-            <div class="gallery-item">
-                <img src="assets/images/children-activities.jpg" alt="School Activities">
+            <button class="gallery-item" type="button" data-full="https://images.unsplash.com/photo-1472162072942-cd5147eb3902?auto=format&fit=crop&w=1600&q=90" aria-label="View School Activities photo larger">
+                <img src="https://images.unsplash.com/photo-1472162072942-cd5147eb3902?auto=format&fit=crop&w=1000&q=80" alt="Children taking part in school activities">
                 <span>School Activities</span>
-            </div>
+            </button>
 
-            <div class="gallery-item">
-                <img src="assets/images/school-representative.jpeg" alt="School Representative">
-                <span>Our School</span>
-            </div>
+            <button class="gallery-item" type="button" data-full="assets/images/sharmila-devi.png" aria-label="View Sharmila Devi photo larger">
+                <img src="assets/images/sharmila-devi.png" alt="Sharmila Devi, Director of SHARMILA ENTERPRISES" loading="lazy">
+                <span>Our Director</span>
+            </button>
 
         </div>
 
     </div>
 </section>
+
+<dialog class="gallery-lightbox" id="galleryLightbox" aria-label="Expanded gallery image">
+    <button class="gallery-lightbox-close" type="button" aria-label="Close image preview">×</button>
+    <img src="" alt="">
+    <p></p>
+</dialog>
+
+<script>
+const galleryLightbox = document.getElementById('galleryLightbox');
+if (galleryLightbox) {
+    const previewImage = galleryLightbox.querySelector('img');
+    const previewCaption = galleryLightbox.querySelector('p');
+
+    document.querySelectorAll('.home-gallery .gallery-item').forEach((item) => {
+        item.addEventListener('click', () => {
+            const thumbnail = item.querySelector('img');
+            previewImage.src = item.dataset.full;
+            previewImage.alt = thumbnail.alt;
+            previewCaption.textContent = item.querySelector('span').textContent;
+            galleryLightbox.showModal();
+        });
+    });
+
+    galleryLightbox.querySelector('.gallery-lightbox-close').addEventListener('click', () => galleryLightbox.close());
+    galleryLightbox.addEventListener('click', (event) => {
+        if (event.target === galleryLightbox) galleryLightbox.close();
+    });
+}
+</script>
 
 
 <!-- PARENTS SECTION -->
@@ -552,7 +579,7 @@ include 'includes/header.php';
     <div class="wrap parents-grid">
 
         <div class="parents-image">
-            <img src="assets/images/parent-communication.jpg" alt="Parent and School Communication">
+            <img src="https://images.unsplash.com/photo-1453738773917-9c3eff1db985?auto=format&fit=crop&w=1000&q=80" alt="Parent and School Communication">
         </div>
 
         <div class="parents-content">

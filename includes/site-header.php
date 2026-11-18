@@ -18,7 +18,8 @@ $page = basename($_SERVER['PHP_SELF'] ?? 'index.php');
             <a href="about.php" class="<?= $page === 'about.php' ? 'active' : '' ?>">About</a>
             <a href="learning.php" class="<?= $page === 'learning.php' ? 'active' : '' ?>">Learning</a>
             <a href="admissions.php" class="<?= $page === 'admissions.php' ? 'active' : '' ?>">Admissions</a>
-            <a href="contact.php" class="nav-contact <?= $page === 'contact.php' ? 'active' : '' ?>">Contact Us</a>
+            <a href="contact.php" class="<?= $page === 'contact.php' ? 'active' : '' ?>">Contact Us</a>
+            <a href="admissions.php#admission-contact" class="nav-contact">Ask About Admissions</a>
         </nav>
     </div>
 </header>
